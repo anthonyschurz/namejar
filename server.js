@@ -39,6 +39,7 @@ app.get('/api/me', auth.ensureAuthenticated, function (req, res) {
   });
 });
 
+
 app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
   User.findById(req.user, function (err, user) {
     if (!user) {
@@ -52,6 +53,7 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
     });
   });
 });
+
 
 app.post('/api/leads', function (req, response) {
     console.log("posting to leads API")
@@ -67,22 +69,24 @@ app.post('/api/leads', function (req, response) {
       console.log(query)
 
 
-      // request attempt
 
-      var requestQuery =
+      // request code
+      sites = ['linkedin', 'facebook', 'twitter'];
 
-      request('http://www.bing.com/search?q=anthony%20schurz%20linkedin', function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-          var $ = cheerio.load(body);
+      sites.forEach(function(entry) {
+        console.log(entry);
 
-             $(".b_factrownosep").each(function() {
-                 var link = $(this);
-                 var text = link.text();
+        var requestQuery = "site%3A" + sites.this + "%20" + lead.firstName + "%20" + lead.lastName + "%20" + encodeURI(lead.location);
 
-                 console.log(text);
-             });
-        }
+        request('http://www.bing.com/search?q=' + requestQuery, function (error, response, body) {
+          if (!error && response.statusCode == 200) {
+            var $ = cheerio.load(body);
+            console.log(requestQuery);
+            //scraper code here
+          }
+        });
       });
+
 
 
 
@@ -107,13 +111,11 @@ app.post('/api/leads', function (req, response) {
 
 
       var newLead = new db.Lead({
-
         firstName: lead.firstName,
         lastName: lead.lastName,
         email: lead.email,
         location: lead.location,
         linkedin: lead.linkedin
-
       });
 
 
@@ -121,12 +123,11 @@ app.post('/api/leads', function (req, response) {
         if(err) {
           res.status(500).send({message: err.message})
         }
-
       });
 
-      })
-
     });
+
+  });
 
 
 app.get('/api/leads', auth.ensureAuthenticated, function (req, res) {
@@ -171,6 +172,8 @@ app.post('/auth/signup', function (req, res) {
     });
   });
 });
+
+
 
 app.post('/auth/login', function (req, res) {
   User.findOne({ email: req.body.email }, '+password', function (err, user) {
