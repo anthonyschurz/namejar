@@ -1,0 +1,81 @@
+
+<div ng-app="AuthSampleApp">
+	<div ng-controller="DataController">
+	<div class="col s3 white" id="sidebar">
+		<h5>Lead Lists
+			<div class="btn btn-file btn-floating red accent-3 hide-on-med-and-down" id="add">
+			<i class="material-icons" style="padding-top: 4px">add</i>
+			<input type="file" id="csv-file" />
+		</div>
+		<span class="fileupload-preview"></span></h5>
+
+
+
+			<div class="fixed-action-btn" style="bottom: 20px; left: 50px;">
+				<span id="export" data-action="export" class="btn cyan lighten-4 upload hide-on-med-and-down">
+					<i class="fa fa-download fa-2x"></i> Download
+				</span>
+			</div>
+
+
+	 		<span id"notification" class=""></span>
+
+ 		</div>
+
+
+
+	<div class="col s9">
+				<div class="input-field white" id="find">
+	        <input id="search" type="text" placeholder="search">
+				</div>
+				<div id="savebutton">
+					<span id="upload" data-action="upload" class="btn cyan lighten-4 upload">
+						<i class="fa fa-file-code-o fa-2x" aria-hidden="true"></i> Scrape
+					</span>
+				</div>
+
+
+			<table id="csv-table" class="table table-stripped table-bordered white highlight" data-toggle="table">
+
+			<thead>
+				<tr>
+						<th id="firstName">First Name</th>
+						<th id="lastName">Last Name</th>
+						<th id="email">Email</th>
+						<th id="location">Location</th>
+						<th id="linkedin">LinkedIn</th>
+
+				</tr>
+			</thead>
+
+		</table>
+
+
+
+		<div class="center">
+			<i class="fa fa-cloud-upload" aria-hidden="true" id="cloud"></i>
+			<p id="CTA">Click The Green Button To Add Your CSV</p>
+		</div>
+
+	</div>
+
+
+</div>
+</div>
+
+<script>
+
+	 $("#search").keyup(function(){
+			 _this = this;
+			 // Show only matching TR, hide rest of them
+			 $.each($("#csv-table tbody tr"), function() {
+					 if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+							$(this).hide();
+					 else
+							$(this).show();
+			 });
+	 });
+
+
+
+</script>
