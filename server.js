@@ -71,12 +71,12 @@ app.post('/api/leads', function (req, response) {
 
 
       // request code
-      sites = ['linkedin', 'facebook', 'twitter'];
+      var sites = ['linkedin', 'facebook', 'twitter'];
 
       sites.forEach(function(entry) {
         console.log(entry);
 
-        var requestQuery = "site%3A" + sites.this + "%20" + lead.firstName + "%20" + lead.lastName + "%20" + encodeURI(lead.location);
+        var requestQuery = "site%3A" + entry + "%20" + lead.firstName + "%20" + lead.lastName + "%20" + encodeURI(lead.location);
 
         request('http://www.bing.com/search?q=' + requestQuery, function (error, response, body) {
           if (!error && response.statusCode == 200) {
