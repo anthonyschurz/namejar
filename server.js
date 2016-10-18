@@ -1,4 +1,3 @@
-// require express and other modules
 var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
@@ -7,9 +6,7 @@ var express = require('express'),
     auth = require('./resources/auth'),
     User = require('./models/user'),
     Post = require('./models/post'),
-    google = require('google'),
-    request = require('request'),
-    cheerio = require('cheerio')
+    google = require('google')
 
 // require and load dotenv
 require('dotenv').load();
@@ -39,7 +36,6 @@ app.get('/api/me', auth.ensureAuthenticated, function (req, res) {
   });
 });
 
-
 app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
   User.findById(req.user, function (err, user) {
     if (!user) {
@@ -54,7 +50,6 @@ app.put('/api/me', auth.ensureAuthenticated, function (req, res) {
   });
 });
 
-
 app.post('/api/leads', function (req, response) {
     console.log("posting to leads API")
     var linkedinarray = [];
@@ -67,29 +62,6 @@ app.post('/api/leads', function (req, response) {
 
       var query = "linkedin " + lead.firstName + " " + lead.lastName + " " + lead.location
       console.log(query)
-
-
-
-      // request code
-      var sites = ['linkedin', 'facebook', 'twitter'];
-
-      sites.forEach(function(entry) {
-        console.log(entry);
-
-        var requestQuery = "site%3A" + entry + "%20" + lead.firstName + "%20" + lead.lastName + "%20" + encodeURI(lead.location);
-
-        request('http://www.bing.com/search?q=' + requestQuery, function (error, response, body) {
-          if (!error && response.statusCode == 200) {
-            var $ = cheerio.load(body);
-            console.log(requestQuery);
-            //scraper code here
-          }
-        });
-      });
-
-
-
-
 
       google(query, function (err, res){
         if (err) console.error(err)
@@ -111,11 +83,13 @@ app.post('/api/leads', function (req, response) {
 
 
       var newLead = new db.Lead({
+
         firstName: lead.firstName,
         lastName: lead.lastName,
         email: lead.email,
         location: lead.location,
         linkedin: lead.linkedin
+
       });
 
 
@@ -123,28 +97,17 @@ app.post('/api/leads', function (req, response) {
         if(err) {
           res.status(500).send({message: err.message})
         }
+
       });
 
-    });
+      })
 
-  });
+    });
 
 
 app.get('/api/leads', auth.ensureAuthenticated, function (req, res) {
     console.log("getting from leads API")
-});
 
-request('http://www.bing.com/search?q=anthony%20schurz%20linkedin', function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-    var $ = cheerio.load(body);
-
-       $(".b_factrownosep").each(function() {
-           var link = $(this);
-           var text = link.text();
-
-           console.log(text);
-       });
-  }
 });
 
 
@@ -172,8 +135,6 @@ app.post('/auth/signup', function (req, res) {
     });
   });
 });
-
-
 
 app.post('/auth/login', function (req, res) {
   User.findOne({ email: req.body.email }, '+password', function (err, user) {
