@@ -44,22 +44,22 @@
   <!-- custom script (angular app) -->
   <script type="text/javascript" src="scripts/app.js"></script>
 
-  <title>Synapse</title>
+  <title>namejar</title>
 </head>
 
-<body ng-controller="MainController as main" class="grey lighten-3">
-  <nav class="navbar navbar-default grey darken-3">
+<body ng-controller="MainController as main" class="white">
+  <nav class="navbar navbar-default white">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/" class="brand-logo">NameJar</a></li>
+          <li><a href="/" class="brand-logo"><img src="http://i.imgur.com/M5XU3Lt.png" style="height: 60px"></a></li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li ng-show="!main.currentUser()"><a ui-sref="signup">Sign Up</a></li>
-          <li ng-show="!main.currentUser()"><a ui-sref="login">Log In</a></li>
-          <li ng-show="main.currentUser()"><a data-target="aboutus" class="modal-trigger">About Us</a></li>
-          <li ng-show="main.currentUser()"><a data-target="contactus" class="modal-trigger">Contact Us</a></li>
-          <li ng-show="main.currentUser()"><a ui-sref="profile">\{{main.currentUser().displayName}}</a></li>
-          <li ng-show="main.currentUser()"><a ui-sref="logout">Log Out</a></li>
+          <li ng-show="!main.currentUser()"><a ui-sref="signup" class="black-nav">Sign Up</a></li>
+          <li ng-show="!main.currentUser()"><a ui-sref="login" class="black-nav">Log In</a></li>
+          <li ng-show="main.currentUser()"><a data-target="aboutus" class="modal-trigger black-nav">About Us</a></li>
+          <li ng-show="main.currentUser()"><a data-target="contactus" class="modal-trigger black-nav">Contact Us</a></li>
+          <li ng-show="main.currentUser()"><a ui-sref="profile" class="black-nav">\{{main.currentUser().displayName}}</a></li>
+          <li ng-show="main.currentUser()"><a ui-sref="logout" class="black-nav">Log Out</a></li>
         </ul>
       </div>
   </nav>

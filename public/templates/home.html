@@ -1,30 +1,13 @@
 
 <div ng-app="AuthSampleApp">
 	<div ng-controller="DataController">
-	<div class="col s3 white hide-on-med-and-down" id="sidebar">
-		<h5>Lead Lists
-			<div class="btn btn-file btn-floating red accent-3 hide-on-med-and-down" id="add">
-			<i class="material-icons" style="padding-top: 4px">add</i>
-			<input type="file" id="csv-file" />
-		</div>
-		<span class="fileupload-preview"></span></h5>
 
 
 
-			<div class="fixed-action-btn" style="bottom: 20px; left: 50px;">
-				<span id="export" data-action="export" class="btn cyan lighten-4 upload">
-					<i class="fa fa-download fa-2x"></i> Download
-				</span>
-			</div>
-
-
-	 		<span id"notification" class=""></span>
-
- 		</div>
 
 
 
-	<div class="col s9">
+	<div class="col s12">
 				<div class="input-field white" id="find">
 	        <input id="search" type="text" placeholder="search">
 				</div>
@@ -42,9 +25,11 @@
 						<th id="firstName">First Name</th>
 						<th id="lastName">Last Name</th>
 						<th id="email">Email</th>
+						<th id="jobTitle">Job Title</th>
 						<th id="location">Location</th>
 						<th id="linkedin">LinkedIn</th>
-
+						<th id="twitter">Twitter</th>
+						<th id="github">Github</th>
 				</tr>
 			</thead>
 
@@ -59,7 +44,20 @@
 
 	</div>
 
+	<div class="btn btn-file btn-floating red accent-3 hide-on-med-and-down" id="add">
+		<i class="material-icons" style="padding-top: 4px">add</i>
+		<input type="file" id="csv-file" />
+	</div>
+	<span class="fileupload-preview"></span>
 
+	<div class="fixed-action-btn" style="bottom: 20px; left: 50px;">
+		<span id="export" data-action="export" class="btn cyan lighten-4 upload">
+			<i class="fa fa-download fa-2x"></i> Download
+		</span>
+	</div>
+
+
+	<span id"notification" class=""></span>
 </div>
 </div>
 

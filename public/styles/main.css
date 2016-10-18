@@ -12,11 +12,10 @@ body {
   margin-top: 15px
 }
 
-#sidebar {
-  border-right: 2px solid #bdbdbd;
-  margin-bottom: -5000px;
-  padding-bottom: 5000px;
+.black-nav {
+  color: black;
 }
+
 
 #find {
   margin: 20px 0 20px 0;
