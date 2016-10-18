@@ -1,7 +1,3 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
 .brand-logo {
   padding-left: 31.25px !important;
   height: 35px
@@ -12,10 +8,11 @@ body {
   margin-top: 15px
 }
 
-.black-nav {
-  color: black;
+#sidebar {
+  border-right: 2px solid #bdbdbd;
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
 }
-
 
 #find {
   margin: 20px 0 20px 0;
