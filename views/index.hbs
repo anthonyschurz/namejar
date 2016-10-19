@@ -55,7 +55,7 @@
           <li ng-show="!main.currentUser()"><a ui-sref="login" class="black-nav">Log In</a></li>
           <li ng-show="main.currentUser()"><a data-target="aboutus" class="modal-trigger black-nav">About Us</a></li>
           <li ng-show="main.currentUser()"><a data-target="contactus" class="modal-trigger black-nav">Contact Us</a></li>
-          <li ng-show="main.currentUser()"><a ui-sref="profile" class="black-nav">\{{main.currentUser().displayName}}</a></li>
+          <li ng-show="main.currentUser()"><a ui-sref="profile" class="black-nav">\{{main.currentUser().displayName}} <img src="http://i.imgur.com/etjVHlT.png" style="height: 8px;" /></a></li>
           <li ng-show="main.currentUser()"><a ui-sref="logout" class="black-nav">Log Out</a></li>
         </ul>
       </div>
