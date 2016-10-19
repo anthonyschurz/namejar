@@ -10,11 +10,14 @@
 }
 
 
-#sidebar {
+.black-nav {
+  color: black;
+}
+/*#sidebar {
   border-right: 2px solid #bdbdbd;
   margin-bottom: -5000px;
   padding-bottom: 5000px;
-}
+}*/
 
 
 #find {
@@ -101,11 +104,14 @@ textarea::-webkit-input-placeholder {
 }
 
 
-.image-upload > input
-{
-    display: none;
+.image-upload > input {
+  display: none;
 }
 
+
+.nav-icon {
+  height: 70px;
+}
 /*.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
