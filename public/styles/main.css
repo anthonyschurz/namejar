@@ -1,5 +1,11 @@
+body {
+  padding: 0 10px 0 10px !important;
+}
+
+
 .brand-logo {
-  padding: 10px 0 0 31.25px !important;
+  position: absolute;
+  top: -33px;
 }
 
 
