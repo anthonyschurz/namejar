@@ -3,31 +3,27 @@
 	<div ng-controller="DataController">
 
 
-
-
-
-
 	<div class="col s12">
 
 <!-- search bar -->
 			<div class="input-field white">
-        <input id="search" type="text" placeholder="search">
+        <input class="narrow" id="search" type="text" placeholder="search">
 
 
 <!-- upload icon -->
 			<div class="file-upload" style="float: right">
 				<label for="csv-file">
-					<img src="http://i.imgur.com/qa67Q9e.png" class="nav-icon"/>
+					<img src="http://i.imgur.com/qa67Q9e.png" class="nav-icon icons"/>
 				</label>
 
 				<input id="csv-file" type="file"/>
 
 				<span id="upload" data-action="upload" class="upload">
-					<img src="http://i.imgur.com/d5JF8Qj.png" style="width: 50px;">
+					<img src="http://i.imgur.com/d5JF8Qj.png" style="width: 50px;" class="icons">
 				</span>
 
 				<span id="export" data-action="export"  style="float: right">
-					<img src="http://i.imgur.com/NFxSxN9.png" class="nav-icon">
+					<img src="http://i.imgur.com/NFxSxN9.png" class="nav-icon icons">
 				</span>
 
 			</div>
@@ -84,6 +80,11 @@
 							$(this).show();
 			 });
 	 });
+
+	 $("#search").click(function(){
+    $(this).toggleClass('narrow wide');
+		$(".icons").toggleClass('show hide');
+	});
 
 
 

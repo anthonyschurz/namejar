@@ -1,6 +1,5 @@
 .brand-logo {
-  padding-left: 31.25px !important;
-  height: 35px
+  padding: 10px 0 0 31.25px !important;
 }
 
 
@@ -17,9 +16,20 @@
 
 #search {
   margin: 0 !important;
-  width: 30%;
   float: right;
   border: 3px solid #B5E2ED;
+}
+
+.narrow {
+  width: 30% !important;
+}
+
+.wide {
+  width: 45% !important;
+}
+
+.hide {
+  display: none !important;
 }
 
 
@@ -91,7 +101,7 @@ textarea::-webkit-input-placeholder {
 
 
 #export {
-  padding-right: 30px; 
+  padding-right: 30px;
 }
 
 
