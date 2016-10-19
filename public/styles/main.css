@@ -21,11 +21,13 @@
 }
 
 .narrow {
-  width: 30% !important;
+  height: 2em !important;
+  width: 20% !important;
 }
 
 .wide {
-  width: 45% !important;
+  height: 1.5em !important;
+  width: 35% !important;
 }
 
 .hide {
@@ -33,11 +35,11 @@
 }
 
 
-#add {
+/*#add {
   left: 40%;
   height: 45px;
   width: 45px;
-}
+}*/
 
 
 .active {
@@ -65,17 +67,20 @@
 }
 
 
-#search,
+/*#search,
 textarea {
-    font-size: 24px;
-    text-indent: 20px;
-}
+    font-size: 22px;
+    text-indent: 15px;
+}*/
 
 
 #search::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
     color: #ccc;
+    font-size: 22px;
+    text-indent: 15px;
     -webkit-text-fill-color: initial;
+
 }
 
 
@@ -85,13 +90,18 @@ textarea::-webkit-input-placeholder {
 
 
 .upload {
-  height: 45px !important;
+  height: 40px !important;
   padding: 5px 35px 0 35px;
 }
 
 
 .btn:active {
   transform: translateY(4px);
+}
+
+
+.file-upload {
+  height: 40px !important;
 }
 
 
@@ -111,11 +121,15 @@ nav {
 
 
 .nav-icon {
-  height: 45px;
+  height: 40px;
 }
 
 .input-field label {
   position: relative !important;
   top: 0;
   left: 0;
+}
+
+input[type=text]:focus:not([readonly]) {
+  box-shadow: 0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0) !important;
 }
