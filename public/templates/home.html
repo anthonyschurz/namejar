@@ -8,16 +8,35 @@
 
 
 	<div class="col s12">
-				<div class="input-field white" id="find">
-	        <input id="search" type="text" placeholder="search">
-				</div>
-				<div id="savebutton">
-					<span id="upload" data-action="upload" class="btn cyan lighten-4 upload">
-						<i class="fa fa-file-code-o fa-2x" aria-hidden="true"></i> Scrape
-					</span>
-				</div>
+
+<!-- search bar -->
+			<div class="input-field white">
+        <input id="search" type="text" placeholder="search">
 
 
+<!-- upload icon -->
+			<div class="file-upload" style="float: right">
+				<label for="csv-file">
+					<img src="http://i.imgur.com/qa67Q9e.png" class="nav-icon"/>
+				</label>
+
+				<input id="csv-file" type="file"/>
+
+				<span id="upload" data-action="upload" class="upload">
+					<img src="http://i.imgur.com/d5JF8Qj.png" style="height: 50px;">
+				</span>
+
+				<span id="export" data-action="export"  style="float: right">
+					<img src="http://i.imgur.com/NFxSxN9.png" class="nav-icon">
+				</span>
+
+			</div>
+		</div>
+
+
+
+
+<!-- table -->
 			<table id="csv-table" class="table table-stripped table-bordered white highlight" data-toggle="table">
 
 			<thead>
@@ -36,7 +55,6 @@
 		</table>
 
 
-
 		<div class="center">
 			<i class="fa fa-cloud-upload" aria-hidden="true" id="cloud"></i>
 		</div>
@@ -44,38 +62,14 @@
 	</div>
 
 
-<!-- OLD -->
+<!-- OLD Upload-->
 	<!-- <div style="float: right" class="btn btn-file">
 			<input type="file" id="csv-file" />
 	</div>
 	<span class="fileupload-preview"></span> -->
 
 
-<!-- NEW -->
-
-	<div class="image-upload">
-    <label for="csv-file">
-        <img src="http://i.imgur.com/qa67Q9e.png" class="nav-icon"/>
-    </label>
-
-    <input id="csv-file" type="file"/>
 	</div>
-
-
-<!-- Good -->
-
-
-
-
-	<div class="fixed-action-btn" style="bottom: 20px; left: 50px;">
-		<span id="export" data-action="export">
-			<img src="http://i.imgur.com/NFxSxN9.png" class="nav-icon">
-		</span>
-	</div>
-
-
-	<span id"notification" class=""></span>
-</div>
 </div>
 
 <script>

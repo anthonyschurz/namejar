@@ -13,22 +13,12 @@
 .black-nav {
   color: black;
 }
-/*#sidebar {
-  border-right: 2px solid #bdbdbd;
-  margin-bottom: -5000px;
-  padding-bottom: 5000px;
-}*/
-
-
-#find {
-  margin: 20px 0 20px 0;
-  width: calc(75% - 3rem) !important;
-  display:inline-block
-}
 
 
 #search {
   margin: 0 !important;
+  width: 30%;
+  float: right;
 }
 
 
@@ -84,16 +74,12 @@ textarea::-webkit-input-placeholder {
 }
 
 
-#savebutton {
+#scrape {
   float: right;
-  padding: 20px 70px 20px 10px;
 }
 
 
 .upload {
-  font-size: 18px;
-  color: #424242;
-  letter-spacing: 2.5px;
   height: 45px !important;
   padding: 5px 35px 0 35px;
 }
@@ -104,7 +90,7 @@ textarea::-webkit-input-placeholder {
 }
 
 
-.image-upload > input {
+.file-upload > input {
   display: none;
 }
 
@@ -112,6 +98,8 @@ textarea::-webkit-input-placeholder {
 .nav-icon {
   height: 70px;
 }
+
+
 /*.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
