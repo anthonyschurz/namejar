@@ -26,7 +26,7 @@
 }
 
 .wide {
-  height: 1.5em !important;
+  height: 2em !important;
   width: 35% !important;
 }
 
@@ -60,25 +60,17 @@
 }
 
 
-#CTA {
-  margin: 0 !important;
-  padding: 0 !important;
-  color: #bdbdbd;
-}
-
-
-/*#search,
-textarea {
-    font-size: 22px;
-    text-indent: 15px;
-}*/
-
-
 #search::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: #ccc;
-    font-size: 22px;
-    text-indent: 15px;
+    color: black;
+    font-size: 16px;
+    background-image: url("http://i.imgur.com/Gi5JV1r.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 18px;
+    border: 10px solid white;
+    cursor: pointer;
     -webkit-text-fill-color: initial;
 
 }
