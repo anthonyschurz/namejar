@@ -5,7 +5,7 @@ body {
 
 .brand-logo {
   position: absolute;
-  top: -33px;
+  top: -39px;
 }
 
 
@@ -23,8 +23,25 @@ body {
 #search {
   margin: 0 !important;
   float: right;
-  border: 3px solid #B5E2ED;
+  border: 2px solid #B5E2ED;
+  padding: 0 0 0 10px;
+  text-shadow: 0px 0px 0px #000;
+  -webkit-text-fill-color: transparent;
 }
+
+#search::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: black;
+    font-size: 16px;
+    background-image: url("http://i.imgur.com/Gi5JV1r.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 18px;
+    border-right: 10px solid white;
+    cursor: pointer;
+}
+
 
 .narrow {
   height: 2em !important;
@@ -39,13 +56,6 @@ body {
 .hide {
   display: none !important;
 }
-
-
-/*#add {
-  left: 40%;
-  height: 45px;
-  width: 45px;
-}*/
 
 
 .active {
@@ -63,22 +73,6 @@ body {
   font-size: 200px;
   color: #e0e0e0;
   padding-top: 100px;
-}
-
-
-#search::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-    color: black;
-    font-size: 16px;
-    background-image: url("http://i.imgur.com/Gi5JV1r.png");
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 18px;
-    border: 10px solid white;
-    cursor: pointer;
-    -webkit-text-fill-color: initial;
-
 }
 
 

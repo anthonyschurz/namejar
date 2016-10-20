@@ -53,15 +53,17 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li ng-show="!main.currentUser()"><a ui-sref="signup" class="black-nav">Sign Up</a></li>
           <li ng-show="!main.currentUser()"><a ui-sref="login" class="black-nav">Log In</a></li>
-          <li ng-show="main.currentUser()"><a data-target="aboutus" class="modal-trigger black-nav">About Us</a></li>
-          <li ng-show="main.currentUser()"><a data-target="contactus" class="modal-trigger black-nav">Contact Us</a></li>
+          <li ng-show="main.currentUser()"><a class="black-nav"><img src="http://i.imgur.com/S21aaRl.png" style="height: 15px;" /> Upgrade Account</a></li>
+          <!-- <li ng-show="main.currentUser()"><a data-target="aboutus" class="modal-trigger black-nav">About Us</a></li>
+          <li ng-show="main.currentUser()"><a data-target="contactus" class="modal-trigger black-nav">Contact Us</a></li> -->
+          <li ng-show="main.currentUser()"><a><img src="http://i.imgur.com/uQIbT6X.png" style="height: 13px;" /></a></li>
           <li ng-show="main.currentUser()"><a ui-sref="profile" class="black-nav">\{{main.currentUser().displayName}} <img src="http://i.imgur.com/etjVHlT.png" style="height: 8px;" /></a></li>
           <li ng-show="main.currentUser()"><a ui-sref="logout" class="black-nav">Log Out</a></li>
         </ul>
       </div>
   </nav>
 
-  <div id="aboutus" class="modal">
+  <!-- <div id="aboutus" class="modal">
     <div class="modal-content">
       <h4>About Us</h4>
       <p>Whether you’re looking to supercharge your CRM with job title information, build marketing segments based on occupation, or pass along candidates to recruiting, Synapse is the enterprise app that allows you to append the latest firmographic information without spending a ton of time searching.</p>
@@ -81,7 +83,7 @@
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
     </div>
-  </div>
+  </div> -->
 
   <div class="row">
     <ui-view>

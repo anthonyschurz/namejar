@@ -83,10 +83,23 @@
 			 });
 	 });
 
+
+
 	 $("#search").click(function(){
     $(this).toggleClass('narrow wide');
 		$(".icons").toggleClass('show hide');
 	});
+
+	$("body").click(function(){
+	 $(".wide").removeClass('wide').addClass('narrow');
+ });
+
+ $("#search").click(function(){
+	 event.stopPropagation();
+});
+
+
+
 
 
 
