@@ -7,24 +7,24 @@
 
 <!-- search bar -->
 			<div class="input-field white">
-				<a href="/" class="brand-logo"><img src="http://i.imgur.com/M5XU3Lt.png" style="height: 60px"></a>
+				<a href="/" class="brand-logo pointer"><img src="http://i.imgur.com/M5XU3Lt.png" style="height: 60px"></a>
 
         <input class="narrow" id="search" type="text" placeholder="search">
 
 
 <!-- icons -->
-			<div class="file-upload" style="float: right">
+			<div class="file-upload pointer" style="float: right">
 				<label for="csv-file">
-					<img src="http://i.imgur.com/qa67Q9e.png" class="nav-icon icons"/>
+					<img src="http://i.imgur.com/qa67Q9e.png" class="nav-icon icons pointer"/>
 				</label>
 
-				<input id="csv-file" type="file"/>
+				<input id="csv-file" class="pointer" type="file"/>
 
-				<span id="upload" data-action="upload" class="upload">
+				<span id="upload" data-action="upload" class="upload pointer">
 					<img src="http://i.imgur.com/d5JF8Qj.png" style="height: 32px;" class="icons">
 				</span>
 
-				<span id="export" data-action="export"  style="float: right">
+				<span id="export" class="pointer" data-action="export"  style="float: right">
 					<img src="http://i.imgur.com/NFxSxN9.png" class="nav-icon icons">
 				</span>
 
@@ -85,21 +85,18 @@
 
 
 
-	 $("#search").click(function(){
-    $(this).toggleClass('narrow wide');
-		$(".icons").toggleClass('show hide');
-	});
+		$("#search").click(function(){
+	    $(this).toggleClass('narrow wide');
+			$(".icons").toggleClass('show hide');
+		});
 
-	$("body").click(function(){
-	 $(".wide").removeClass('wide').addClass('narrow');
- });
+		$("body").click(function(){
+		 $(".wide").removeClass('wide').addClass('narrow');
+		});
 
- $("#search").click(function(){
-	 event.stopPropagation();
-});
-
-
-
+		$("#search").click(function(){
+			 event.stopPropagation();
+		});
 
 
 
